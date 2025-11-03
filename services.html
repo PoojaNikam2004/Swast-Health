@@ -1,0 +1,191 @@
+<!-- File: services.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swast Health — Services</title>
+
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #0f766e;
+      --accent-dark: #0b6c63;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(2,6,23,0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: #0f172a; }
+
+    /* Navbar */
+    header {
+      background: white;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+    }
+    .logo { font-weight: 700; font-size: 22px; color: #0f172a; text-decoration: none; }
+    .logo span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 22px; }
+    .nav-links a {
+      text-decoration: none; color: #0f172a; font-weight: 500;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background: linear-gradient(180deg,#eef6f9,#ffffff);
+    }
+    .hero h1 { font-size: 32px; margin-bottom: 12px; }
+    .hero p { color: var(--muted); font-size: 17px; max-width: 620px; margin: 0 auto; }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 34px rgba(2,6,23,0.1);
+    }
+    .card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 16px;
+    }
+    .card h3 { margin: 0 0 10px; font-size: 20px; }
+    .card p { color: var(--muted); font-size: 15px; line-height: 1.5; }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      background: var(--accent);
+      color: white;
+      padding: 60px 20px;
+      border-radius: var(--radius);
+      margin: 60px auto;
+      max-width: 1000px;
+    }
+    .cta h2 { font-size: 26px; margin-bottom: 10px; }
+    .cta p { font-size: 16px; margin-bottom: 24px; color: rgba(255,255,255,0.9); }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: white;
+      color: var(--accent);
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .btn:hover { background: #f3f4f6; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 14px;
+      background: #ffffff;
+      border-top: 1px solid #e6edf3;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 26px; }
+      .cta h2 { font-size: 22px; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="logo">Swast<span>Health</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="login.html">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Our Health Services</h1>
+    <p>At Swast Health, we bring you comprehensive care — from preventive checkups to virtual consultations — all designed for your wellbeing.</p>
+  </section>
+
+  <section class="services">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="Consultation icon">
+      <h3>Online Consultations</h3>
+      <p>Connect with certified doctors anytime, anywhere through our secure telemedicine platform.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966481.png" alt="Health records icon">
+      <h3>Digital Health Records</h3>
+      <p>Access and manage your medical reports and prescriptions securely in one place.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966507.png" alt="Lab tests icon">
+      <h3>Lab Test Booking</h3>
+      <p>Book diagnostic tests at partner labs and receive results directly within your Swast Health account.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966533.png" alt="Fitness icon">
+      <h3>Wellness & Fitness Plans</h3>
+      <p>Personalized wellness programs designed by nutritionists and trainers to help you stay in shape.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to take charge of your health?</h2>
+    <p>Join Swast Health today and access all your healthcare services in one simple dashboard.</p>
+    <a href="login.html" class="btn">Get Started</a>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Swast Health. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
